@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Cadastro</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <form action="index.php" method="post" >
+            
+            <fieldset><legend>Cadastro de CD</legend>
+                <p>Artista: <input type="text" name="art" required/>
+                    <p>Titulo: <input type="text" name="titulo" required/>
+                        <p>Descrição: 
+                            <p><textarea rows="5" cols="20" name="descricao">
+                                    </textarea>
+                                <p>Preço: <input type="number" name="preco"/>
+                                    <p>Ano: <input type="date" name="ano"/>
+                                            <p>Estilo: <select name="tipo_musica">
+                                                    <option value="rock">Rock</option>
+                                                    <option value="samba">Samba</option>
+                                                    <option value="funk">Funk</option>
+                                        </select>
+                                                
+                                            <p>Gravadora: <select name="gravadora">
+                                                    <option value="Sony">Sony Music Entertainment Brasil</option>
+                                                    <option value="Universal">Universal Music Brasil</option>
+                                                    <option value="Kondzilla">Kondzilla Brasil</option>
+                                        </select>
+                                                
+                                            <p> Músicas: 
+                                                <p><textarea rows="5" cols="20" name="musica">
+                                    </textarea>
+                                                
+                                                
+                                            
+                            <p><input type="submit" name="button" value="Inserir">
+                                <input type="reset" name="button" value="Selecionar">
+                                <input type="submit" name="button" value="Atualizar">
+                                <input type="reset" value="Deletar">
+                                <input type="reset" value="Limpar">
+            </fieldset>
+    </body>
+</html>
