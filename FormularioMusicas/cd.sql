@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 31-Out-2019 às 07:56
+-- Generation Time: 31-Out-2019 às 08:24
 -- Versão do servidor: 10.1.38-MariaDB
 -- versão do PHP: 7.3.3
 
@@ -29,15 +29,23 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `cd` (
-  `cod` int(5) NOT NULL,
-  `titulo` varchar(30) DEFAULT NULL,
+  `cod` int(4) NOT NULL,
+  `artista` varchar(40) DEFAULT NULL,
+  `titulo` varchar(20) DEFAULT NULL,
   `descricao` varchar(200) NOT NULL,
   `preco` float NOT NULL,
-  `ano` varchar(20) NOT NULL,
+  `ano` date NOT NULL,
   `tipo_musica` varchar(20) NOT NULL,
   `gravadora` varchar(20) NOT NULL,
   `musica` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `cd`
+--
+
+INSERT INTO `cd` (`cod`, `artista`, `titulo`, `descricao`, `preco`, `ano`, `tipo_musica`, `gravadora`, `musica`) VALUES
+(1, '', 'Muito bom', '            1213                        ', 50, '1997-09-01', 'rock', 'Sony', '                                    ');
 
 --
 -- Indexes for dumped tables
@@ -57,7 +65,7 @@ ALTER TABLE `cd`
 -- AUTO_INCREMENT for table `cd`
 --
 ALTER TABLE `cd`
-  MODIFY `cod` int(5) NOT NULL AUTO_INCREMENT;
+  MODIFY `cod` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
