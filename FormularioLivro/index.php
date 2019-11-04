@@ -9,7 +9,7 @@ mysqli_select_db($conexao,$banco)or die (mysqli_error());
 $titulo=$_POST['titulo'];
 $autor=$_POST['autor'];
 $editora=$_POST['editora'];
-$preco=$_POST['precooo3'];
+$preco=$_POST['preco'];
 
 
 
