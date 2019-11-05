@@ -1,25 +1,25 @@
 <html>
     <head>
-        <title>Cadastro</title>
+        <title>Aula 8</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         <form action="index.php" method="post">
             <fieldset><legend>Cadastro de Livro</legend>
-                Titulo:<input type="text" name="titulo" placeholder="Titulo do Livro" required><br><br>
-                Autor:<input type="text" name="autor" placeholder="Nome do Autor" required><br><br>
+                Titulo:<input type="text" name="titulo" placeholder="Titulo do Livro"><br><br>
+                Autor:<input type="text" name="autor" placeholder="Nome do Autor"><br><br>
                 Editora:<select name="editora">
                     <option value="campus">Campus</option>
                     <option value="saraiva">Saraiva</option>
                     <option value="abril">Abril</option>
                 </select>
                 <p>Preço:<input type="number" name="preco" step="any"><br><br>
-                <input type="submit" value="Cadastrar">
+                <input type="submit" name="button" value="Cadastrar">
                 <input type="reset" value="Limpar">
-                <input type="submit" value="Selecionar">
-                <input type="submit" value="Deletar">
-                <input type="submit" value="Atualizar">
+                <input type="submit" name="button" value="Selecionar">
+                <input type="submit" name="button" value="Deletar">
+                <input type="submit" name="button" value="Atualizar">
         </form>
     </body>
 </html>
