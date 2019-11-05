@@ -12,24 +12,23 @@ $editora=$_POST['editora'];
 $preco=$_POST['preco'];
 
 
-
-if($_POST['button'] == "Deletar"){
-    $sql = mysqli_query($conexao, "delete from livro where titulo = '{$titulo}");
-    echo"<h1> O livro '$titulo', foi deletado com sucesso!</h1>";
-}
-
 if($_POST['button'] == "Cadastrar"){
 $sql=mysqli_query($conexao,"insert into livros(titulo,autor,editora,preco)values('$titulo', '$autor', '$editora', '$preco')");
 echo"<h1>O $titulo foi cadastrado com sucesso!!!</h1>";
 }
 
+if($_POST['button'] == "Deletar"){
+    $sql = mysqli_query($conexao, "delete from livros where titulo ='{$titulo}'");
+    echo"<h1> O livro '$titulo', foi deletado com sucesso!</h1>";
+}
+
 if($_POST['button'] == "Atualizar"){
-    $sql=mysqli_query($conexao, "update livro set autor='{$autor}' where editora = '$editora'");
+    $sql=mysqli_query($conexao, "update livros set autor='{$autor}' where editora = '$editora'");
     echo"<h1>O $autor foi atualizado com sucesso!!!</h1>";
 }
 
 if($_POST['button'] == "Selecionar"){
-    $busca = "select * from livro where titulo='{$titulo}'";
+    $busca = "select * from livros ";
     $sql = mysqli_query($conexao, $busca);
     $i=0;
     while ($linha= mysqli_fetch_array($sql)){
